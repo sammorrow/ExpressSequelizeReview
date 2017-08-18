@@ -2,7 +2,7 @@ var Sequelize = require('sequelize');
 var db = new Sequelize('postgres://localhost:5432/mypuppies', {logging: false})
 
 var Puppy = db.define('puppy', {
-  //columns aka schema
+  //ATTRIBUTE DEFINITIONS
   name: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -24,17 +24,12 @@ var Puppy = db.define('puppy', {
     type: Sequelize.VIRTUAL
   }
 }, {
-  instanceMethods: {
-    greet: function() {
-      return this.name;
-    }
-  },
-  getterMethods: {
-    //
-  },
+  // OPTIONS
 })
 
-var FaveLocation = db.define('faveLocation', {
+//ASSOCIATIONS
+
+var FaveLocation = db.define('location', {
   address: {
     type: Sequelize.STRING,
     allowNull: false,
