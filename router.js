@@ -14,7 +14,7 @@ router.get('/:id', (req, res, next) => {
 router.post('/addAPuppy', (req, res, next) => {
 })
 
-// when a user hits this route, we want to send them the puppy by its id.
+// when a user hits this route, we want to update a puppy by its id.
 router.put('/:id', (req, res, next) => {
 })
 
